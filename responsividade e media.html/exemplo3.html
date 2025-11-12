@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    nav {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Responsivo para celulares */
+    @media (max-width: 700px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        padding: 10px;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h3>Meu Site</h3>
+    <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('active')">☰</div>
+    <div class="menu">
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </div>
+  </nav>
+</body>
+</html>
