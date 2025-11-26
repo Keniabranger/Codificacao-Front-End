@@ -14,7 +14,7 @@ body.dark {
 
 
 header {
-    background: ;
+    background: #ff00aa;
     padding: 20px;
     text-align: center;
     color: white;
@@ -38,12 +38,12 @@ header {
 
 
 body.dark .box {
-    background: #2a2a2a;
+    background: #ff00bf;
 }
 
 
 button {
-    background: #4a4a8c;
+    background: #ff00b3;
     border: none;
     padding: 10px 15px;
     border-radius: 6px;
@@ -53,7 +53,7 @@ button {
 
 
 button:hover {
-    background: #5b5bb0;
+    background: #ff00aa;
 }
 
 
@@ -66,10 +66,16 @@ input {
 .color-target {
     width: 150px;
     height: 150px;
-    background: #4a4a8c;
+    background: #ff00d4;
     margin-top: 10px;
     border-radius: 10px;
     transition: 0.2s;
 }
+
+
+
+
+
+
 
 

@@ -1,0 +1,88 @@
+{ 
+    "pinturas": [
+        {
+        "Titulodaobra": "Mona Lisa",
+        "Ano": "1503–1506",
+        "Autor": "Leonardo da Vinci",
+        "Movimento": "Renascimento",
+        "Local": "Museu do Louvre, Paris"
+
+        },
+ {
+        "Titulodaobra": "O Nascimento de Vênus",
+        "Ano": "1484–1486",
+        "Autor": "Sandro Botticelli",
+        "Movimento": "Renascimento",
+        "Local": "Galeria Uffizi, Florença"
+
+        },
+ {
+        "Titulodaobra": "A Escola de Atenas",
+        "Ano": "1509–1511",
+        "Autor": "Sandro Botticelli",
+        "Movimento": "Renascimento",
+        "Local": "Museus do Vaticano"
+
+        },
+ {
+        "Titulodaobra": "Guernica",
+        "Ano": "1937",
+        "Autor": "Pablo Picasso",
+        "Movimento": "Cubismo / Modernismo",
+        "Local": "Museu Reina Sofía, Madri"
+
+        },
+ {
+        "Titulodaobra": "A Noite Estrelada",
+        "Ano": "1889",
+        "Autor": "Leonardo da Vinci",
+        "Movimento": "Pós-impressionismo",
+        "Local": "MoMA, Nova York"
+
+        },
+ {
+        "Titulodaobra": "Os Girassóis",
+        "Ano": "1888",
+        "Autor": "Vincent van Gogh",
+        "Movimento": "Pós-impressionismo",
+        "Local": "National Gallery, Londres"
+
+        },
+ {
+        "Titulodaobra": "O Grito",
+        "Ano": "1893",
+        "Autor": "Edvard Munch",
+        "Movimento": " Expressionismo",
+        "Local": "Galeria Nacional da Noruega"
+
+        },
+ {
+        "Titulodaobra": "A Ronda Noturna",
+        "Ano": "1642",
+        "Autor": "Rembrandt",
+        "Movimento": "Barroco",
+        "Local": "Rijksmuseum, Amsterdã"
+
+        },
+ {
+        "Titulodaobra": "O Beijo",
+        "Ano": "1907–1908",
+        "Autor": "Gustav Klimt",
+        "Movimento": "Art Nouveau / Simbolismo",
+        "Local": "Belvedere, Viena"
+
+        },
+ {
+        "Titulodaobra": "A Grande Onda de Kanagawa",
+        "Ano": "1831",
+        "Autor": "Katsushika Hokusai",
+        "Movimento": "Ukiyo-e (arte japonesa)",
+        "Local": "Várias coleções (British Museum, MoMA etc.)"
+
+        }
+
+    ]
+
+
+
+}
