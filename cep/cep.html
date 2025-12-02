@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>formulario</title>
-    </head>
-    <body>
-     <div>
-     <h1>Cadastro e Endereço</h1>
-      <form action="cep.html" method="post">
-        <br>
-        <label for="cep">Digite o cep:</label>
-        <input type="number" id="cep" name="cep" required>
-        <br>
-        <label for="logradouro">logradouro:</label>
-        <input type="text" id="logradouro" name="logradouro">
-        <br>
-        <label for="bairro">bairro:</label>
-        <input type="text" id="bairro" name="bairro">
-        <br>
-        <label for="cidade">cidade:</label>
-        <input type="cidade" id="cidade" name="cidade">
-        <br>
-        <label for="estado">estado:</label>
-        <input type="estado" id="estado" name="estado">
-        <br>
-      </form>
-     </div>
-      <script>
-        var campoCep = document.getElementById ('cep');
-        campoCep.addEventListener ('blur', function(){
-            var valorCep = campoCep.value
-            fetch('https://viacep.com.br/ws/'+valorCep+'/json/')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                document.getElementById('logradouro').value = data.logradouro;
-                document.getElementById('bairro').value = data.bairro;
-                document.getElementById('cidade').value = data.localidade;
-                document.getElementById('estado').value = data.estado
-                document.getElementById('cep').style.border = "solid green 24px"
-            })
-            .catch(erro => (
-                document.getElementById('cep').style.border = "solid red 24px"
-            ))
-            .finally(() => {
-                console.log('processo')
-            })
-        })
-      </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de CEP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cadastroEndereco">
+      <h2>Cadastro de Endereço</h2>
+      <label for="CEP">Digite o CEP:</label>
+      <input type="text" id="CEP" maxlength="8" placeholder="Ex: 12345678" />
+      <br />
+      <label for="Logradouro">Logradouro:</label>
+      <input type="text" id="Logradouro" />
+      <br />
+      <label for="Bairro">Bairro:</label>
+      <input type="text" id="Bairro" />
+      <br />
+      <label for="Cidade">Cidade:</label>
+      <input type="text" id="Cidade" />
+      <br />
+      <label for="Estado">Estado:</label>
+      <input type="text" id="Estado" />
+    </div>
+
+    
+    <div id="pokemon-info">
+
+
+
+    </div>
+  </body>
 </html>
+
+<script>
+  var campoCep = document.getElementById("CEP");
+  campoCep.addEventListener("blur", function () {
+    var cep = campoCep.value;
+    fetch("https://viacep.com.br/ws/" + cep + "/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        document.getElementById("Logradouro").value = data.logradouro;
+        document.getElementById("Bairro").value = data.bairro;
+        document.getElementById("Cidade").value = data.localidade;
+        document.getElementById("Estado").value = data.uf;
+
+        campoCep.style.border = "24px solid green";
+          var ultimos3 = document.getElementById("CEP").value;
+          fetch("https://pokeapi.co/api/v2/pokemon/" + ultimos3.substr(5, 3))
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              document.getElementById("pokemon-info").innerHTML =
+                "nome: " + data.name;
+              document.getElementById("pokemon-info").innerHTML +=
+                '<br><img src="' +
+                data.sprites.front_default +
+                '" width="150">';
+            });      
+        })
+      })
+</script>
