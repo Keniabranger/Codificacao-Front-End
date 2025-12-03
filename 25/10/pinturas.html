@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestão de Filmes - JSON</title>
+    <link rel="stylesheet" href="pinturas.json">
 </head>
 <body>
-    <h1>Pinturas</h1>
-    
+
+
+<header class="win-header">
+    <h1>Gerenciador de pinturas(JSON)</h1>
+</header>
+
+
+<main class="container">
+
+
+    <!-- Área de busca -->
+    <section class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar por pintura...">
+        <button id="btnSearch">Buscar</button>
+        <button id="btnListAll">Listar Tudo</button>
+        <button id="btnAdd">Adicionar Nova pintura</button>
+    </section>
+
+
+    <!-- Listagem dos filmes -->
+    <section id="pintura" class="pintura">
+        <!-- JS renderiza aqui -->
+    </section>
+
+
+</main>
+
+
+<!-- Popup Modal para adicionar/editar -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+
+
+        <h2 id="modalTitle">Editar pintura</h2>
+
+
+        <form id="pintura">
+            <label>Nome da obra: </label>
+            <input type="text" id="Titulodaobra">
+
+
+            <label>Ano:</label>
+            <input type="text" id="Ano">
+
+
+            <label>Autor:</label>
+            <input type="text" id="Autor">
+
+
+            <label>Movimento: </label>
+            <input type="text" id="Movimento">
+
+
+            <label>Local: </label>
+            <input type="text" id="Local">
+           
+            <label>Capa (URL):</label>
+            <input type="text" id="capa">
+
+
+            <div class="modal-btns">
+                <button type="submit">Salvar</button>
+                <button type="button" id="btnClose">Cancelar</button>
+            </div>
+        </form>
+
+
+    </div>
+</div>
+
+
+<script src="carros.js"></script>
+
+
 </body>
 </html>
+
+
